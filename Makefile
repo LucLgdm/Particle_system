@@ -46,7 +46,7 @@ clean: ## Clean object files via docker
 
 fclean: clean ## Clean object files and executable and docker volumes
 	@rm -f $(NAME)
-	$(COMPOSE) run --rm $(SERVICE) make _clean
+	$(COMPOSE) run --rm $(SERVICE) make _fclean
 	$(COMPOSE) down --volumes --rmi local
 	$(COMPOSE) rm -f
 	@echo "\033[35mDeleted everything!\033[0m"
